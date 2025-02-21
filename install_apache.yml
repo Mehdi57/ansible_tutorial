@@ -1,0 +1,17 @@
+---
+
+- hosts: all
+  
+  tasks:
+
+
+  - name: update repository index
+    dnf:
+      update_cache: true 
+      state: latest
+
+
+  -  name: "Install the latest version of Apache"
+     dnf:
+       name: httpd
+       state: latest
